@@ -35,5 +35,5 @@ function reduce(callback_fn,initialValue){
   for (; index< this.length; index++){
     accumulator = callback_fn.call(this, accumulator, this[index], index, this)
   }
-  
+  return accumulator;
 }

@@ -22,18 +22,18 @@ map(dune,function(a){ return a})
 
 let a3 = [1, 2, 3, -9];
 
-function reduce(array,callback_fn,initialValue){
-  if (!this.length && initialValue === undefined){
+function reduce(arr,callback_fn,initialValue){
+  if (!arr.length && initialValue === undefined){
     throw TypeError("Reduce of empty array with no initial value");
   }
   let accumulator= initialValue;
   let index =0;
   if (initialValue === undefined){
-    accumulator = this[0];
+    accumulator = arr[0];
     index =1;
   }
-  for (; index< this.length; index++){
-    accumulator = callback_fn.call(this, accumulator, this[index], index, this)
+  for (; index< arr.length; index++){
+    accumulator = callback_fn.call(arr, accumulator, arr[index], index, arr)
   }
   return accumulator;
 }

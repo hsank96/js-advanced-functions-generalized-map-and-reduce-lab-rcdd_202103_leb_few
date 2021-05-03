@@ -22,7 +22,7 @@ map(dune,function(a){ return a})
 
 let a3 = [1, 2, 3, -9];
 
-function reduce(callback_fn,initialValue){
+function reduce(array,callback_fn,initialValue){
   if (!this.length && initialValue === undefined){
     throw TypeError("Reduce of empty array with no initial value");
   }

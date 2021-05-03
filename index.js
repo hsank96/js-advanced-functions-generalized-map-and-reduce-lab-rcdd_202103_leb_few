@@ -37,3 +37,6 @@ function reduce(arr,callback_fn,initialValue){
   }
   return accumulator;
 }
+
+let sourceArray = [1,2,3]
+reduce(sourceArray, function(e, memo){return e + memo})

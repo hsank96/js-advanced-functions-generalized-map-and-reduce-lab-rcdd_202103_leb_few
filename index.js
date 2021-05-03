@@ -33,7 +33,7 @@ function reduce(callback_fn,initialValue){
     index =1;
   }
   for (; index< this.length; index++){
-    accumulator = callback_fn.call(this, accumulator, this[index], )
+    accumulator = callback_fn.call(this, accumulator, this[index], index, this)
   }
   
 }
